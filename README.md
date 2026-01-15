@@ -10,16 +10,19 @@
 
 Hoy dejamos de inventarnos datos. Vamos a conectarnos a una base de datos mundial para obtener información en tiempo real.
 
-datos_json (DICCIONARIO / OBJETO)
+```text
+datos_json (OBJETO / DICCIONARIO)  --> { }
 │
-├── "info": { ... } (Otro diccionario pequeño con info de páginas)
+├── "info": { ... }   (Otro objeto con info de paginación)
 │
-└── "results": [  <-- ESTO ES EL ARRAY / LISTA
-       { "id": 1, "name": "Rick Sanchez"... },  (Personaje 0)
-       { "id": 2, "name": "Morty Smith"... },   (Personaje 1)
-       { "id": 3, "name": "Summer Smith"... }   (Personaje 2)
+└── "results": [      (ARRAY / LISTA) --> [ ]
+       │
+       ├── { "id": 1, "name": "Rick Sanchez"... },  (Posición 0)
+       ├── { "id": 2, "name": "Morty Smith"... },   (Posición 1)
+       ├── { "id": 3, "name": "Summer Smith"... }   (Posición 2)
        ...
     ]
+```
 
 Para ello, usaremos dos herramientas nuevas:
 
