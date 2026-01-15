@@ -10,6 +10,17 @@
 
 Hoy dejamos de inventarnos datos. Vamos a conectarnos a una base de datos mundial para obtener información en tiempo real.
 
+datos_json (DICCIONARIO / OBJETO)
+│
+├── "info": { ... } (Otro diccionario pequeño con info de páginas)
+│
+└── "results": [  <-- ESTO ES EL ARRAY / LISTA
+       { "id": 1, "name": "Rick Sanchez"... },  (Personaje 0)
+       { "id": 2, "name": "Morty Smith"... },   (Personaje 1)
+       { "id": 3, "name": "Summer Smith"... }   (Personaje 2)
+       ...
+    ]
+
 Para ello, usaremos dos herramientas nuevas:
 
 1.  **`requests` (El Mensajero):** Una librería que "llama" a una página web y se trae la información.
