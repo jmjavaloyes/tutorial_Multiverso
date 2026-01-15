@@ -17,14 +17,14 @@ if st.button("📡 Descargar Datos"):
         # 1. Hacemos la petición a la web
         respuesta = requests.get(url)
         
-        # 2. Convertimos el texto recibido en un diccionario (JSON)
+        # 2. Convertimos el texto recibido en un diccionario de Python (objetos) (JSON)
         datos_json = respuesta.json()
         # --- Con esto vemos los datos descargados ---
         st.write("👀 Así se ven los datos crudos (JSON):")
         st.json(datos_json) 
         # -----------------------------
         
-        # 3. Extraemos la lista de personajes (están bajo la clave 'results')
+        # 3. Extraemos la lista de personajes (están bajo la clave 'results'). Es un array (una lista en Python)
         lista_personajes = datos_json['results']
         
         # 4. MAGIA PANDAS: Convertimos la lista en una Tabla (DataFrame)
