@@ -10,7 +10,7 @@ st.markdown("Esta app descarga datos reales de la API de Rick & Morty.")
 st.header("1. Conexión a la API")
 
 # URL de la API (La dirección de internet donde están los datos)
-url = '[https://rickandmortyapi.com/api/character](https://rickandmortyapi.com/api/character)'
+url = 'https://rickandmortyapi.com/api/character'
 
 if st.button("📡 Descargar Datos"):
     with st.spinner('Contactando con el servidor...'):
