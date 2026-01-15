@@ -50,7 +50,14 @@ if 'mi_tabla' in st.session_state:
         estado = st.radio("Filtrar por estado:", ["Alive", "Dead", "unknown"], horizontal=True)
     
     # --- LÓGICA PANDAS ---
+    # Un DataFrame es una tabla "programable": le puedes pedir cosas y se "redibuja"
     # Traducido: "Del DataFrame (df), quédate con las filas donde la columna 'status' sea igual a lo que eligió el usuario"
+    # Para filtrar la tabla se usa la estructura: df[  LA_COLUMNA   COMPARACIÓN   EL_VALOR  ]
+    # Es decir: 
+    # df['status']-->la columna "status" 
+    # == significa "que coincida" 
+    # el valor de la variable "estado": Alive, Dead...
+    
     df_filtrado = df[df['status'] == estado]
     
     with col_filtro2:
