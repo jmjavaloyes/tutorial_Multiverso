@@ -19,6 +19,10 @@ if st.button("📡 Descargar Datos"):
         
         # 2. Convertimos el texto recibido en un diccionario (JSON)
         datos_json = respuesta.json()
+        # --- Con esto vemos los datos descargados ---
+        st.write("👀 Así se ven los datos crudos (JSON):")
+        st.json(datos_json) 
+        # -----------------------------
         
         # 3. Extraemos la lista de personajes (están bajo la clave 'results')
         lista_personajes = datos_json['results']
