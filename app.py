@@ -53,7 +53,7 @@ if 'mi_tabla' in st.session_state:
         st.metric("Personajes encontrados", len(df_filtrado))
 
     # Mostramos la tabla interactiva (Solo columnas interesantes)
-    st.dataframe(df_filtrado[['name', 'species','gender', 'location']])
+    st.dataframe(df_filtrado[['name', 'species','gender']])
 
     # --- GALERÍA DE IMÁGENES ---
     st.header(f"Galería de personajes ({estado})")
